@@ -1,0 +1,193 @@
+var audio = document.getElementById("audioPlayer"),
+  loader = document.getElementById("preloader");
+function settingtoggle() {
+  document
+    .getElementById("setting-container")
+    .classList.toggle("settingactivate"),
+    document
+      .getElementById("visualmodetogglebuttoncontainer")
+      .classList.toggle("visualmodeshow"),
+    document
+      .getElementById("soundtogglebuttoncontainer")
+      .classList.toggle("soundmodeshow");
+}
+function playpause() {
+  !1 == document.getElementById("switchforsound").checked
+    ? audio.pause()
+    : audio.play();
+}
+function visualmode() {
+  document.body.classList.toggle("light-mode"),
+    document.querySelectorAll(".needtobeinvert").forEach(function (e) {
+      e.classList.toggle("invertapplied");
+    });
+}
+// Add a timeout to ensure preloader is hidden even if some resources are slow to load
+document.addEventListener("DOMContentLoaded", function() {
+  // Set a maximum time the preloader will show
+  setTimeout(function() {
+    if (loader) {
+      loader.style.opacity = "0";
+      setTimeout(function() {
+        loader.style.display = "none";
+      }, 300);
+    }
+    const heyElement = document.querySelector(".hey");
+    if (heyElement) {
+      heyElement.classList.add("popup");
+    }
+  }, 1500); // Maximum preloader time of 1.5 seconds
+});
+
+// Also keep the original load event for when all resources are actually loaded
+window.addEventListener("load", function () {
+  if (loader) {
+    loader.style.opacity = "0";
+    setTimeout(function() {
+      loader.style.display = "none";
+    }, 300);
+  }
+  const heyElement = document.querySelector(".hey");
+  if (heyElement) {
+    heyElement.classList.add("popup");
+  }
+});
+let emptyArea = document.getElementById("emptyarea"),
+  mobileTogglemenu = document.getElementById("mobiletogglemenu");
+function hamburgerMenu() {
+  document.body.classList.toggle("stopscrolling"),
+    document
+      .getElementById("mobiletogglemenu")
+      .classList.toggle("show-toggle-menu"),
+    document
+      .getElementById("burger-bar1")
+      .classList.toggle("hamburger-animation1"),
+    document
+      .getElementById("burger-bar2")
+      .classList.toggle("hamburger-animation2"),
+    document
+      .getElementById("burger-bar3")
+      .classList.toggle("hamburger-animation3");
+}
+function hidemenubyli() {
+  document.body.classList.toggle("stopscrolling"),
+    document
+      .getElementById("mobiletogglemenu")
+      .classList.remove("show-toggle-menu"),
+    document
+      .getElementById("burger-bar1")
+      .classList.remove("hamburger-animation1"),
+    document
+      .getElementById("burger-bar2")
+      .classList.remove("hamburger-animation2"),
+    document
+      .getElementById("burger-bar3")
+      .classList.remove("hamburger-animation3");
+}
+const sections = document.querySelectorAll("section"),
+  navLi = document.querySelectorAll(".navbar .navbar-tabs .navbar-tabs-ul li"),
+  mobilenavLi = document.querySelectorAll(
+    ".mobiletogglemenu .mobile-navbar-tabs-ul li"
+  );
+window.addEventListener("scroll", () => {
+  let e = "";
+  sections.forEach((t) => {
+    let o = t.offsetTop;
+    t.clientHeight, pageYOffset >= o - 200 && (e = t.getAttribute("id"));
+  }),
+    mobilenavLi.forEach((t) => {
+      t.classList.remove("activeThismobiletab"),
+        t.classList.contains(e) && t.classList.add("activeThismobiletab");
+    }),
+    navLi.forEach((t) => {
+      t.classList.remove("activeThistab"),
+        t.classList.contains(e) && t.classList.add("activeThistab");
+    });
+}),
+  console.log(
+    "%c Designed and Developed by Mukesh Jangid ",
+    "background-image: linear-gradient(90deg,#8000ff,#6bc5f8); color: white;font-weight:900;font-size:1rem; padding:20px;"
+  );
+let mybutton = document.getElementById("backtotopbutton");
+function scrollFunction() {
+  document.body.scrollTop > 400 || document.documentElement.scrollTop > 400
+    ? (mybutton.style.display = "block")
+    : (mybutton.style.display = "none");
+}
+function scrolltoTopfunction() {
+  (document.body.scrollTop = 0), (document.documentElement.scrollTop = 0);
+}
+window.fbAsyncInit = function() {
+  FB.init({
+    appId      : '1320329742943475',
+    cookie     : true,
+    xfbml      : true,
+    version    : 'v23.0' // Use latest supported API version
+  });
+};
+function postToGroup() {
+  console.log('postToGroup');
+  // FB.login(function(response) {
+    // if (response.authResponse) {
+      FB.api(
+        '/446617934677823/feed', // Your group ID
+        'POST',
+        {
+          message: 'Your post text here',
+          // access_token: response.authResponse.accessToken
+        },
+        function(result) {
+          if (result.error) {
+            alert('Error: ' + result.error.message);
+          } else {
+            alert('Post ID: ' + result.id);
+          }
+        }
+      );
+    // } else {
+      // alert('User cancelled login or did not fully authorize.');
+    // }
+  // }, {scope: 'publish_to_groups'}); // Likely deprecated unless legacy/enterprise
+}
+
+(window.onscroll = function () {
+  scrollFunction();
+  postToGroup();
+}),
+  document.addEventListener(
+    "contextmenu",
+    function (e) {
+      "IMG" === e.target.nodeName && e.preventDefault();
+    },
+    !1
+  );
+let Pupils = document.getElementsByClassName("footer-pupil"),
+  pupilsArr = Array.from(Pupils),
+  pupilStartPoint = -10,
+  pupilRangeX = 20,
+  pupilRangeY = 15,
+  mouseXStartPoint = 0,
+  mouseXEndPoint = window.innerWidth,
+  currentXPosition = 0,
+  fracXValue = 0,
+  mouseYEndPoint = window.innerHeight,
+  currentYPosition = 0,
+  fracYValue = 0,
+  mouseXRange = mouseXEndPoint - mouseXStartPoint;
+const mouseMove = (e) => {
+    (fracXValue =
+      (currentXPosition = e.clientX - mouseXStartPoint) / mouseXRange),
+      (fracYValue = (currentYPosition = e.clientY) / mouseYEndPoint);
+    let t = pupilStartPoint + fracXValue * pupilRangeX,
+      o = pupilStartPoint + fracYValue * pupilRangeY;
+    pupilsArr.forEach((e) => {
+      e.style.transform = `translate(${t}px, ${o}px)`;
+    });
+  },
+  windowResize = (e) => {
+    (mouseXEndPoint = window.innerWidth),
+      (mouseYEndPoint = window.innerHeight),
+      (mouseXRange = mouseXEndPoint - mouseXStartPoint);
+  };
+window.addEventListener("mousemove", mouseMove),
+  window.addEventListener("resize", windowResize);
