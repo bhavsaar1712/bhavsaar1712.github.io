@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nikhil Bhavsar | Software Engineer</title>
+  <title>Nikhil Bhavsar — Software Engineer</title>
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" />
@@ -11,142 +11,146 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Tailwind CSS -->
+  <!-- Tailwind CSS (CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
+  <meta name="description" content="Nikhil Bhavsar · Lead Software Engineer · Node.js, TypeScript, NestJS, Angular, Generative AI" />
 </head>
-<body class="bg-gray-50 text-gray-800 font-poppins">
+<body class="bg-gray-50 text-gray-800 font-poppins antialiased">
+
+  <!-- Header / Nav -->
+  <header class="w-full py-6 bg-white shadow-sm">
+    <div class="container mx-auto px-6 lg:px-0 flex items-center justify-between">
+      <a href="#" class="text-xl font-bold text-gray-900">Nikhil Bhavsar</a>
+      <nav class="space-x-6 text-sm">
+        <a href="#about" class="text-gray-600 hover:text-indigo-600">About</a>
+        <a href="#skills" class="text-gray-600 hover:text-indigo-600">Skills</a>
+        <a href="#portfolio" class="text-gray-600 hover:text-indigo-600">Portfolio</a>
+        <a href="#contact" class="text-gray-600 hover:text-indigo-600">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center bg-white">
-    <h1 class="text-4xl lg:text-6xl font-bold">Hi, I'm <span class="text-indigo-600">Nikhil Bhavsar</span></h1>
-    <p class="mt-4 text-xl text-gray-600">
-      Lead Software Engineer specializing in <strong>Node.js, Angular, TypeScript</strong> & <strong>Generative AI</strong>
-    </p>
-    <div class="mt-6">
-      <a href="#contact" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Hire Me</a>
-      <a href="#portfolio" class="px-6 py-3 ml-4 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100">Projects</a>
+  <section class="min-h-[70vh] flex items-center bg-gradient-to-b from-white to-gray-50">
+    <div class="container mx-auto px-6 lg:px-0 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+        Hi, I'm <span class="text-indigo-600">Nikhil Bhavsar</span>
+      </h1>
+      <p class="mt-4 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
+        Lead Software Engineer specializing in Node.js, Angular, TypeScript and Generative AI — building scalable backend systems, real-time apps, and intelligent integrations.
+      </p>
+
+      <div class="mt-8 flex items-center justify-center gap-4">
+        <a href="#contact" class="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow hover:bg-indigo-700">Hire Me</a>
+        <a href="#portfolio" class="px-6 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-100">View Projects</a>
+        <a href="https://www.linkedin.com/in/nikhil-bhavsar-3a9422181/" target="_blank" rel="noopener" class="px-4 py-3 text-sm text-gray-700 rounded-lg hover:bg-gray-100">LinkedIn</a>
+      </div>
     </div>
   </section>
 
   <!-- About -->
-  <section id="about" class="py-20 bg-gray-100">
-    <div class="container mx-auto px-6 lg:px-0">
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-0 max-w-4xl">
       <h2 class="text-3xl font-bold text-center">About Me</h2>
-      <p class="mt-4 text-center max-w-3xl mx-auto text-gray-700">
-        Proficient software professional with 5+ years of development experience, skilled across the entire
-        project life cycle. Adept in <strong>Node.js, TypeScript, NestJS, Angular</strong>, and the MEAN stack,
-        with strong expertise in backend architecture, microservices, and scalable API development. Demonstrates
-        solid proficiency in algorithm design, data processing logic, and <strong>Generative AI/LLM integrations</strong> 
-        for building intelligent, automated systems.
+      <p class="mt-4 text-gray-700 text-center">
+        Proficient software professional with 5+ years of development experience across the full project lifecycle.
+        I build reliable backend systems and APIs using Node.js, NestJS, and TypeScript, develop frontend experiences with Angular,
+        and integrate Generative AI models to add smart capabilities to products. I enjoy designing microservices, architecting scalable solutions,
+        and shipping production-ready software.
       </p>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-20 bg-white">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold">Skills</h2>
-
-      <div class="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8 px-6 lg:px-0">
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Languages</h4>
-          <p class="text-gray-600">JavaScript, TypeScript</p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+          <h3 class="font-semibold">Core strengths</h3>
+          <ul class="mt-3 text-gray-600 list-disc list-inside">
+            <li>Backend architecture & microservices (Node.js / NestJS)</li>
+            <li>TypeScript-first development & system design</li>
+            <li>Generative AI / LLM integrations (OpenAI, Gemini, etc.)</li>
+          </ul>
         </div>
-
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Frontend</h4>
-          <p class="text-gray-600">Angular, React Native</p>
-        </div>
-
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Backend</h4>
-          <p class="text-gray-600">Node.js, NestJS, Express</p>
-        </div>
-
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Databases</h4>
-          <p class="text-gray-600">MongoDB, MySQL, Redis</p>
-        </div>
-
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Cloud & DevOps</h4>
-          <p class="text-gray-600">AWS, Docker, GitHub Actions</p>
-        </div>
-
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Messaging</h4>
-          <p class="text-gray-600">RabbitMQ, Socket.IO</p>
-        </div>
-
-        <div class="skill-card p-4 bg-gray-100 rounded-lg shadow-md">
-          <h4 class="font-semibold">Generative AI</h4>
-          <p class="text-gray-600">OpenAI, Gemini, Deepgram</p>
+        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+          <h3 class="font-semibold">Other skills</h3>
+          <ul class="mt-3 text-gray-600 list-disc list-inside">
+            <li>Databases: MongoDB, MySQL, Redis</li>
+            <li>DevOps: AWS, Docker, GitHub Actions</li>
+            <li>Realtime & messaging: Socket.IO, RabbitMQ</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects / Portfolio -->
-  <section id="portfolio" class="py-20 bg-gray-100">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold">Portfolio</h2>
-      <p class="mt-3 text-gray-600">Selected works & contributions</p>
+  <!-- Skills -->
+  <section id="skills" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 lg:px-0 text-center">
+      <h2 class="text-3xl font-bold">Skills</h2>
+      <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 max-w-4xl mx-auto">
+        <div class="p-4 bg-white rounded-lg shadow">Node.js</div>
+        <div class="p-4 bg-white rounded-lg shadow">TypeScript</div>
+        <div class="p-4 bg-white rounded-lg shadow">NestJS</div>
+        <div class="p-4 bg-white rounded-lg shadow">Angular</div>
+        <div class="p-4 bg-white rounded-lg shadow">Generative AI</div>
+        <div class="p-4 bg-white rounded-lg shadow">AWS / Docker</div>
+      </div>
+    </div>
+  </section>
 
-      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 lg:px-0">
-        <!-- Example Project -->
-        <div class="project-card bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-xl">Dating App (MVP)</h3>
-          <p class="mt-2 text-gray-600 text-sm">
-            Built a Tinder-like mobile app using Node.js, NestJS, React Native & Socket.IO with core swipe & match logic.
-          </p>
-          <a href="#" class="text-indigo-600 hover:underline mt-3 block text-sm">View Project</a>
-        </div>
+  <!-- Portfolio -->
+  <section id="portfolio" class="py-16 bg-white">
+    <div class="container mx-auto px-6 lg:px-0 text-center">
+      <h2 class="text-3xl font-bold">Selected Projects</h2>
+      <p class="mt-2 text-gray-600">A few highlights showing backend architecture, real-time systems and AI integrations.</p>
 
-        <!-- Add more projects here -->
-        <div class="project-card bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-xl">AI Transcription Tool</h3>
-          <p class="mt-2 text-gray-600 text-sm">
-            Integrated Deepgram + OpenAI for automated transcription and analysis pipeline with Node.js backend.
-          </p>
-          <a href="#" class="text-indigo-600 hover:underline mt-3 block text-sm">View Project</a>
-        </div>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <article class="p-6 bg-gray-50 rounded-lg shadow-sm text-left">
+          <h3 class="font-semibold text-lg">Dating App (MVP)</h3>
+          <p class="mt-2 text-sm text-gray-600">Built a Tinder-like mobile app with Node.js, NestJS, React Native and Socket.IO. Implemented swipe & real-time match logic and scalable session management.</p>
+          <div class="mt-4">
+            <a href="#" class="text-indigo-600 hover:underline text-sm">View Project</a>
+          </div>
+        </article>
 
-        <div class="project-card bg-white p-6 rounded-lg shadow-md">
-          <h3 class="font-semibold text-xl">Enterprise Backend Services</h3>
-          <p class="mt-2 text-gray-600 text-sm">
-            Designed and implemented scalable APIs & microservices using NestJS and AWS for a SaaS platform.
-          </p>
-          <a href="#" class="text-indigo-600 hover:underline mt-3 block text-sm">View Project</a>
-        </div>
+        <article class="p-6 bg-gray-50 rounded-lg shadow-sm text-left">
+          <h3 class="font-semibold text-lg">AI Transcription & Analysis Tool</h3>
+          <p class="mt-2 text-sm text-gray-600">Integrated Deepgram and OpenAI for automated transcription, summarization and semantic search over audio content with a Node.js pipeline.</p>
+          <div class="mt-4">
+            <a href="#" class="text-indigo-600 hover:underline text-sm">View Project</a>
+          </div>
+        </article>
+
+        <article class="p-6 bg-gray-50 rounded-lg shadow-sm text-left">
+          <h3 class="font-semibold text-lg">Enterprise Backend Services</h3>
+          <p class="mt-2 text-sm text-gray-600">Designed and implemented scalable APIs and microservices using NestJS and AWS for a SaaS platform, including CI/CD and observability.</p>
+          <div class="mt-4">
+            <a href="#" class="text-indigo-600 hover:underline text-sm">View Project</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20 bg-white">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold">Get in Touch</h2>
-      <p class="mt-2 text-gray-600">Let’s build something amazing together.</p>
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 lg:px-0 max-w-2xl text-center">
+      <h2 class="text-3xl font-bold">Get in touch</h2>
+      <p class="mt-2 text-gray-600">Looking for freelance, contract or full-time opportunities. Let’s build something great.</p>
 
-      <div class="mt-8 max-w-lg mx-auto">
-        <form action="mailto:your.email@example.com" method="POST" class="grid gap-4">
-          <input type="text" name="name" placeholder="Your Name" required class="p-3 border rounded-lg">
-          <input type="email" name="email" placeholder="Your Email" required class="p-3 border rounded-lg">
-          <textarea name="message" rows="4" placeholder="Your Message" required class="p-3 border rounded-lg"></textarea>
-          <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Send Message</button>
-        </form>
+      <div class="mt-8">
+        <!-- NOTE: Update the mailto before publishing -->
+        <a href="mailto:email@example.com" class="inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">Email me</a>
+
+        <p class="mt-6 text-sm text-gray-600">
+          Or connect on <a href="https://www.linkedin.com/in/nikhil-bhavsar-3a9422181/" target="_blank" rel="noopener" class="text-indigo-600 hover:underline">LinkedIn</a>.
+        </p>
       </div>
-
-      <p class="mt-6 text-gray-600 text-sm">
-        Or connect with me on <a href="https://www.linkedin.com/in/nikhil-bhavsar-3a9422181/" class="text-indigo-600 hover:underline">LinkedIn</a>
-      </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-6 text-center text-gray-500 text-sm">
-    &copy; 2025 Nikhil Bhavsar. All rights reserved.
+  <footer class="py-8 bg-white text-center text-gray-500 text-sm">
+    &copy; 2025 Nikhil Bhavsar. Built with ♥ · <a href="#" class="text-indigo-600 hover:underline">Privacy</a>
   </footer>
+
 </body>
 </html>
